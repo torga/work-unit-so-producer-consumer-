@@ -16,7 +16,8 @@ public class Menu extends javax.swing.JDialog {
     private Consumidor consumidor;
     private Buffer buffer;
     private ExecutorService exec = Executors.newCachedThreadPool();
-  
+    
+    //Não mexa no construtor
     //₢riar forma principal do modelo
     public Menu(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
