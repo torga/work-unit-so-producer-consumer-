@@ -17,12 +17,12 @@ public class Menu extends javax.swing.JDialog {
     private Buffer buffer;
     private ExecutorService exec = Executors.newCachedThreadPool();
   
-    
+    //₢riar forma principal do modelo
     public Menu(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         componentes();
     }
-   
+   //Componentes do modelo usando javax.swing
     private void componentes() {
         jbtnIniciar = new javax.swing.JButton();
         jbtnParar = new javax.swing.JButton();
@@ -83,7 +83,7 @@ private void jbtnPararActionPerformed(java.awt.event.ActionEvent evt) {
     }
 }
    
-
+//Visibilidade do modelo
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
