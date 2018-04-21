@@ -10,7 +10,7 @@ public class Produtor implements Runnable {
     public Produtor(Buffer buffer) {
         this.buffer = buffer;
     }
-   
+    //método para executar o andamento das threads
     public void run() {
         proxThread = Thread.currentThread();
         stopRequested = false;        
@@ -19,11 +19,12 @@ public class Produtor implements Runnable {
             try {
                 Thread.sleep(20);
             } catch (InterruptedException ex) {
-                // re-assert interrupt
+             
                 Thread.currentThread().interrupt();
             }
         }
     }
+    \\método para parar
     public void para() {
         stopRequested = true;
         if (proxThread != null) {
