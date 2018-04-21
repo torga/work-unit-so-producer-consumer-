@@ -8,7 +8,7 @@ public class Consumidor implements Runnable {
     public Consumidor(Buffer buffer) {
         this.buffer = buffer;
     }
-   
+   //método para prosseguir fila
     public void run() {
         proxThread = Thread.currentThread();
         paraThread = false;        
@@ -23,6 +23,7 @@ public class Consumidor implements Runnable {
             }
         }
     }
+    // método para parar fila
     public void para() {
         paraThread = true;
         if (proxThread != null) {
